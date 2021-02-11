@@ -1,0 +1,19 @@
+@model Dictionary<string,List<string>>
+
+@{
+    ViewData["Title"] = "Test Action";
+}
+<h1>Coucou, bienvenue sur TestAction</h1>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Key :
+            <ul>
+                @foreach (var value in item.Value)
+                {
+                    <li>@value</li>
+                }
+            </ul>
+        </li>
+    }
+</ul>
